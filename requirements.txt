@@ -1,0 +1,23 @@
+# Core pipeline
+pandas>=2.0
+numpy>=1.24
+pyfaidx
+bioframe
+pyyaml
+tqdm
+
+# DeepCompARE + AlphaGenome adapter
+torch>=2.0,<2.5
+# deepISA itself (Conv/compute_predictions/AlphaGenomeAdapter):
+#   pip install --no-deps "git+https://github.com/anderssonlab/deepISA"
+# (--no-deps avoids pysam/pyBigWig, which are unneeded here and unsupported on Windows)
+
+# Enformer (PyTorch port, weights auto-download from HuggingFace)
+enformer-pytorch>=0.8
+
+# AlphaGenome API client (needs a free non-commercial key)
+alphagenome
+
+# figures
+matplotlib
+scipy

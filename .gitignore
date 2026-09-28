@@ -1,0 +1,12 @@
+# local reference genomes (re-download with scripts or see README)
+data/reference/
+
+# caches and scratch
+__pycache__/
+*.pyc
+*.cache.sqlite
+.hf_cache/
+hf_cache/
+
+# keep small MVP outputs for provenance, ignore bulk reruns
+results/predictions/enformer_full.csv

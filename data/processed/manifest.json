@@ -1,0 +1,16 @@
+{
+  "tsv": "GRCh38_F9_GP1BA_HBB_HBG1_LDLR_PKLR-24h_BCL11A_SORT1.tsv",
+  "filters": {
+    "alt_not_dash": true,
+    "p_value_max": 0.05
+  },
+  "n_variants": 606,
+  "per_element": {
+    "HBG1": 362,
+    "HBB": 244
+  },
+  "elements_written": [
+    "HBB",
+    "HBG1"
+  ]
+}

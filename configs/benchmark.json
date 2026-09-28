@@ -1,0 +1,61 @@
+{
+  "filters": { "alt_not_dash": true, "p_value_max": 0.05 },
+
+  "window_bp": 600,
+
+  "elements": {
+    "BCL11A":   { "chrom": "chr2",  "start": 60494940,  "end": 60495539  },
+    "F9":       { "chrom": "chrX",  "start": 139530463, "end": 139530765 },
+    "GP1BA":    { "chrom": "chr22", "start": 19723266,  "end": 19723650  },
+    "HBB":      { "chrom": "chr11", "start": 5227022,   "end": 5227208   },
+    "HBG1":     { "chrom": "chr11", "start": 5249805,   "end": 5250078   },
+    "LDLR":     { "chrom": "chr19", "start": 11089231,  "end": 11089548  },
+    "PKLR-24h": { "chrom": "chr1",  "start": 155301395, "end": 155301864 },
+    "SORT1":    { "chrom": "chr1",  "start": 109274652, "end": 109275251 }
+  },
+
+  "cell_line_map": {
+    "BCL11A": "K562",
+    "F9": "HepG2",
+    "GP1BA": "K562",
+    "HBB": "K562",
+    "HBG1": "K562",
+    "LDLR": "HepG2",
+    "PKLR-24h": "K562",
+    "SORT1": "HepG2"
+  },
+
+  "deepcompare": {
+    "track_names": {
+      "0": "CAGE HepG2", "1": "CAGE K562",
+      "2": "DNase HepG2", "3": "DNase K562",
+      "4": "STARR HepG2", "5": "STARR K562",
+      "6": "SuRE HepG2", "7": "SuRE K562"
+    },
+    "tracks_by_cell_line": { "HepG2": [0, 2, 4, 6], "K562": [1, 3, 5, 7] }
+  },
+
+  "enformer": {
+    "context_bp": 196608,
+    "center_bin": 448,
+    "bin_bp": 128,
+    "track_indices": {
+      "CAGE_K562":  { "all": [4828, 5111], "untreated": [4828, 5111] },
+      "CAGE_HepG2": { "all": [5109], "untreated": [5109] },
+      "DNASE_K562": { "all": [33, 34, 35, 121, 122, 123, 625], "untreated": [33, 34, 35, 121, 122, 123] },
+      "DNASE_HepG2": { "all": [27, 91, 234], "untreated": [27, 91, 234] }
+    },
+    "track_selection": "all",
+    "targets_file": "configs/enformer_targets_human.txt"
+  },
+
+  "alphagenome": {
+    "seq_len": 600,
+    "context_bp": 16384,
+    "aggregation": "sum",
+    "tracks_by_cell_line": {
+      "K562":  ["CAGE:K562", "DNASE:K562", "ATAC:K562"],
+      "HepG2": ["CAGE:HepG2", "DNASE:HepG2", "ATAC:HepG2"]
+    }
+  }
+}

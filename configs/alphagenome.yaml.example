@@ -1,0 +1,27 @@
+# AlphaGenome backend config for the MPRA benchmark (see deepISA's AlphaGenomeAdapter).
+# Copy to configs/alphagenome.yaml and set the api_key (or export ALPHAGENOME_API_KEY).
+# Free non-commercial key: https://deepmind.google.com/science/alphagenome
+#
+# One API call per unique sequence; the adapter keeps a crash-safe SQLite cache
+# next to this file, so re-running resumes where it left off.
+api_key: ${ALPHAGENOME_API_KEY}
+
+context_len: 16384
+seq_len: 600
+aggregation: sum          # window aggregation over the central 600 bp, then log1p
+
+# All six (assay, cell) groups in one call; 05_correlations averages within group
+# and picks each element's cell line. Column order = this list.
+tracks:
+  - output_type: CAGE
+    biosample_name: K562
+  - output_type: DNASE
+    biosample_name: K562
+  - output_type: ATAC
+    biosample_name: K562
+  - output_type: CAGE
+    biosample_name: HepG2
+  - output_type: DNASE
+    biosample_name: HepG2
+  - output_type: ATAC
+    biosample_name: HepG2
