@@ -62,6 +62,11 @@ def main():
     device = args.device
     if device == "auto":
         device = "cuda" if torch.cuda.is_available() else "cpu"
+    if device == "cpu" and args.device == "auto" and args.limit is None:
+        raise SystemExit(
+            "No CUDA device visible: Enformer needs ~30 s/sequence on CPU "
+            "(~34 h for the full run). In Colab: Runtime > Change runtime type > T4 GPU, "
+            "then Run all again. For a deliberate CPU smoke test, add --limit N.")
 
     def load_enformer():
         # transformers>=4.53 refuses torch.load() of .bin checkpoints on torch<2.6
