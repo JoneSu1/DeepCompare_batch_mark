@@ -6,8 +6,14 @@ bioframe
 pyyaml
 tqdm
 
-# DeepCompARE + AlphaGenome adapter
-torch>=2.0,<2.5
+# NOTE: torch is intentionally NOT listed.
+#   Colab: preinstalled (>=2.6) — installing a pinned older torch here would
+#          downgrade the runtime's CUDA-matched build for no benefit.
+#   Local (Windows + Anaconda): the system-wide msvcp140.dll clash caps torch at
+#          <2.5, so install it explicitly:
+#     pip install "torch>=2.0,<2.5" --index-url https://download.pytorch.org/whl/cpu
+#   Other platforms: any torch>=2.0.
+
 # deepISA itself (Conv/compute_predictions/AlphaGenomeAdapter):
 #   pip install --no-deps "git+https://github.com/anderssonlab/deepISA"
 # (--no-deps avoids pysam/pyBigWig, which are unneeded here and unsupported on Windows)

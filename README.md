@@ -20,7 +20,8 @@ data/input/*.tsv ─► 01_prepare_sequences ─► data/processed/variants.csv 
 ## Quickstart (local, minimal viable test)
 
 ```bash
-python -m venv .venv && .venv/Scripts/pip install -r requirements.txt   # or bin/pip on Linux
+python -m venv .venv && .venv/Scripts/pip install "torch>=2.0,<2.5" --index-url https://download.pytorch.org/whl/cpu
+.venv/Scripts/pip install -r requirements.txt   # torch deliberately not listed there
 .venv/Scripts/pip install --no-deps "git+https://github.com/anderssonlab/deepISA"
 
 # reference genome (only chromosomes actually used; UCSC hg38)
