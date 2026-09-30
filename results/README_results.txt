@@ -14,3 +14,5 @@ predictions/alphagenome.csv   AlphaGenome 8 条原始轨道 (3877×8)
 模型: DeepCompARE (本地 model.h5) / Enformer (HF: EleutherAI/enformer-official-rough)
       / AlphaGenome (DeepMind API)
 复现: GitHub 仓库 README → 本地三行命令, 或 notebooks/run_colab.ipynb 一键
+
+重画图: python scripts/06_figure.py (需 pandas/matplotlib, 依赖 src/ 与 configs/ 一并附上)
