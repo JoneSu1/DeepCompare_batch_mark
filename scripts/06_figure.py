@@ -32,9 +32,9 @@ MODEL_COLOR = {"DeepCompARE": "#F8766D", "Enformer": "#00BFC4", "AlphaGenome": "
 MODEL_ORDER = ["DeepCompARE", "Enformer", "AlphaGenome"]
 # shape = prediction method (reference legend; ATAC added for AlphaGenome)
 ASSAY_SHAPE = {"CAGE": "o", "DNASE": "D", "STARR": "X", "SURE": "*", "ATAC": "v"}
-ASSAY_LABEL = {"CAGE": "CAGE (cell type matched)", "DNASE": "DNase (cell type matched)",
-               "STARR": "STARR (cell type matched)", "SURE": "SuRE (cell type matched)",
-               "ATAC": "ATAC (cell type matched)"}
+ASSAY_LABEL = {"CAGE": "CAGE", "DNASE": "DNase",
+               "STARR": "STARR", "SURE": "SuRE",
+               "ATAC": "ATAC"}
 ASSAY_PER_MODEL = {"DeepCompARE": ["CAGE", "DNASE", "STARR", "SURE"],
                    "Enformer": ["CAGE", "DNASE"],
                    "AlphaGenome": ["CAGE", "DNASE", "ATAC"]}
