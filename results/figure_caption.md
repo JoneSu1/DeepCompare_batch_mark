@@ -14,10 +14,11 @@ AlphaGenome (CAGE mean, DNase mean, and cell-type-specific ATAC, aggregated
 over the element-centered 600-bp window; 3 points). Marker shape denotes the
 prediction method; colour denotes the model. Black lines mark each model's
 median within an element. Across all element-track points, median correlations
-are 0.61 (AlphaGenome), 0.47 (Enformer), and 0.45 (DeepCompARE); DeepCompARE
-performs strongest on SuRE/STARR functional tracks (up to r = 0.79, PKLR-24h
-SuRE), whereas Enformer shows negative CAGE correlations for HBG1 (r = -0.64)
-and HBB (CAGE HepG2, r = -0.29).
+are 0.61 (AlphaGenome), 0.47 (Enformer), and 0.45 (DeepCompARE). DeepCompARE
+performs strongest on SuRE/STARR functional tracks (max r = 0.77, F9 SuRE
+HepG2), whereas Enformer's strongest single point is DNase-based (r = 0.79,
+PKLR-24h DNase K562) yet it shows negative CAGE correlations for HBG1
+(CAGE HepG2 r = -0.64; CAGE K562 r = -0.39) and HBB (CAGE HepG2, r = -0.29).
 
 ## 中文
 
@@ -29,6 +30,7 @@ and HBB (CAGE HepG2, r = -0.29).
 AlphaGenome 3 点（CAGE 均值、DNase 均值、细胞特异 ATAC，在元件中心 600 bp 窗口内
 聚合）。点的形状 = 预测方法，颜色 = 模型；黑色短横线 = 该元件内各模型的中位数。
 全部元件-轨道点的中位相关系数：AlphaGenome 0.61 > Enformer 0.47 >
-DeepCompARE 0.45；DeepCompARE 在 SuRE/STARR 功能测定轨道上最强（PKLR-24h SuRE
-达 r = 0.79），Enformer 在 HBG1（CAGE K562 r = -0.64）与 HBB（CAGE HepG2
-r = -0.29）出现负相关。
+DeepCompARE 0.45。DeepCompARE 在 SuRE/STARR 功能测定轨道上最强（最大
+r = 0.77，F9 SuRE HepG2）；Enformer 单点最高值来自 DNase（PKLR-24h
+DNase K562，r = 0.79），但在 HBG1（CAGE HepG2 r = -0.64；CAGE K562
+r = -0.39）与 HBB（CAGE HepG2 r = -0.29）出现 CAGE 负相关。
