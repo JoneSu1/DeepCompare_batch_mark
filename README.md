@@ -88,9 +88,9 @@ python scripts/04_predict_alphagenome.py
 
 | step | state |
 |---|---|
-| 01 sequence preparation | verified (HBB+HBG1 MVP: 606 variants, ref-genome assert passes) |
-| 02 DeepCompARE | verified (MVP; HBB SuRE K562 r=+0.69, CAGE K562 r=+0.65) |
-| 03 Enformer | code done; local smoke test, full run intended on Colab GPU |
-| 04 AlphaGenome | code done; awaits API key |
-| 05 correlations | verified (MVP correlations.csv) |
-| 06 figure | TODO (per-element strip plot, median ticks, per task-spec figure) |
+| 01 sequence preparation | verified (full run: 3,877 variants, 8 elements, on Colab) |
+| 02 DeepCompARE | verified (full run; local-MVP cross-check matched to 4e-6) |
+| 03 Enformer | verified (full run on Colab T4) |
+| 04 AlphaGenome | verified (full run, ~3,885 API calls) |
+| 05 correlations | verified (full `correlations.csv`, 144 rows) |
+| 06 figure | done (`results/figure_correlations.png/.pdf`; medians DC 0.446 / Enf 0.472 / AG 0.613) |
